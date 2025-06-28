@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.left, .right {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.left input, .right input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.left button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #555;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
